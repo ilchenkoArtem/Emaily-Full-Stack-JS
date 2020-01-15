@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import Payments from "./Payments";
 
 const Header = () => {
   const isAuth = useSelector(({ auth }) => auth);
@@ -17,11 +18,14 @@ const Header = () => {
           </li>
         );
       default:
-        return (
+        return [
+          <li>
+            <Payments />
+          </li>,
           <li>
             <a href="/api/logout">Logout</a>
           </li>
-        );
+        ];
     }
   };
 
