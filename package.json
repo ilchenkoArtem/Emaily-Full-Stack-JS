@@ -8,12 +8,10 @@
     "npm": "6.12.1"
   },
   "scripts": {
-    "start": "concurrently \"npm run build-client\" \"npm run start-server\"",
-    "build-client": "npm run build -prefix client",
-    "start-server": "node index.js",
-    "server-dev": "nodemon index.js",
+    "start": "node index.js",
+    "server": "nodemon index.js",
     "client": "npm run start --prefix client",
-    "dev": "concurrently \"npm run server-dev\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "ISC",
